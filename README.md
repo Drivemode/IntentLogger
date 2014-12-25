@@ -19,7 +19,7 @@ public class MainActivity extends Activity {
 }
 ```
 
-Then...
+Then in LogCat
 
 ```
 12-25 17:39:33.550    1195-1195/com.drivemode.intentlog.app V/test﹕ Intent[172e5d96] content:
@@ -33,6 +33,20 @@ Then...
 12-25 17:39:33.552    1195-1195/com.drivemode.intentlog.app V/test﹕ Flag     : FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
 12-25 17:39:33.552    1195-1195/com.drivemode.intentlog.app V/test﹕ HasExtras: true
 12-25 17:39:33.552    1195-1195/com.drivemode.intentlog.app V/test﹕ Extra[profile] :0
+```
+
+cf. `Intent#toString()`
+
+```
+12-25 17:55:32.381    3358-3358/com.drivemode.intentlog.app V/test﹕ Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10100000 cmp=com.drivemode.intentlog.app/.MainActivity bnds=[481,810][1312,1641] }
+```
+
+## Download
+
+Gradle:
+
+```
+compile 'com.drivemode:IntentLogger:1.0.0@aar'
 ```
 
 ## License
