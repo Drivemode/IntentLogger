@@ -22,23 +22,23 @@ public class MainActivity extends Activity {
 Then in LogCat
 
 ```
-12-25 17:39:33.550    1195-1195/com.drivemode.intentlog.app V/test﹕ Intent[172e5d96] content:
-12-25 17:39:33.551    1195-1195/com.drivemode.intentlog.app V/test﹕ Action   : android.intent.action.MAIN
-12-25 17:39:33.551    1195-1195/com.drivemode.intentlog.app V/test﹕ Category : {android.intent.category.LAUNCHER}
-12-25 17:39:33.551    1195-1195/com.drivemode.intentlog.app V/test﹕ Data     : null
-12-25 17:39:33.551    1195-1195/com.drivemode.intentlog.app V/test﹕ Component: com.drivemode.intentlog.app/com.drivemode.intentlog.app.MainActivity
-12-25 17:39:33.551    1195-1195/com.drivemode.intentlog.app V/test﹕ Flags    : 10000001100000000000000000000
-12-25 17:39:33.551    1195-1195/com.drivemode.intentlog.app V/test﹕ Flag     : FLAG_RECEIVER_FOREGROUND
-12-25 17:39:33.552    1195-1195/com.drivemode.intentlog.app V/test﹕ Flag     : FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY
-12-25 17:39:33.552    1195-1195/com.drivemode.intentlog.app V/test﹕ Flag     : FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
-12-25 17:39:33.552    1195-1195/com.drivemode.intentlog.app V/test﹕ HasExtras: true
-12-25 17:39:33.552    1195-1195/com.drivemode.intentlog.app V/test﹕ Extra[profile] :0
+app V/test﹕ Intent[172e5d96] content:
+app V/test﹕ Action   : android.intent.action.MAIN
+app V/test﹕ Category : {android.intent.category.LAUNCHER}
+app V/test﹕ Data     : null
+app V/test﹕ Component: com.drivemode.intentlog.app/com.drivemode.intentlog.app.MainActivity
+app V/test﹕ Flags    : 10000001100000000000000000000
+app V/test﹕ Flag     : FLAG_RECEIVER_FOREGROUND
+app V/test﹕ Flag     : FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY
+app V/test﹕ Flag     : FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+app V/test﹕ HasExtras: true
+app V/test﹕ Extra[profile] :0
 ```
 
 cf. `Intent#toString()`
 
 ```
-12-25 17:55:32.381    3358-3358/com.drivemode.intentlog.app V/test﹕ Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10100000 cmp=com.drivemode.intentlog.app/.MainActivity bnds=[481,810][1312,1641] }
+app V/test﹕ Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10100000 cmp=com.drivemode.intentlog.app/.MainActivity bnds=[481,810][1312,1641] }
 ```
 
 ## Download
