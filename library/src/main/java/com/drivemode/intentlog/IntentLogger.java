@@ -1,6 +1,7 @@
 package com.drivemode.intentlog;
 
 import android.content.Intent;
+import android.os.BadParcelableException;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -95,7 +96,11 @@ public class IntentLogger {
             return;
         }
         for (String key : extras.keySet()) {
-            Log.v(tag, "Extra[" + key + "] :" + String.valueOf(extras.get(key)));
+            try {
+                Log.v(tag, "Extra[" + key + "] :" + String.valueOf(extras.get(key)));
+            } catch (BadParcelableException e) {
+                Log.w(tag, "Extra contains unknown class instance for [" + key + "]: ", e);
+            }
         }
     }
 }
