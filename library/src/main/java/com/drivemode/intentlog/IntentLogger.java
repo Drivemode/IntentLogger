@@ -64,7 +64,7 @@ public class IntentLogger {
         Log.v(tag, "Data     : " + intent.getDataString());
         Log.v(tag, "Component: " + intent.getComponent().getPackageName() + "/" + intent.getComponent().getClassName());
         dumpFlags(tag, intent.getFlags());
-        Log.v(tag, "HasExtras: " + (extras != null && !extras.isEmpty()));
+        Log.v(tag, "HasExtras: " + hasExtras(extras));
         dumpExtras(tag, extras);
     }
 
@@ -101,6 +101,19 @@ public class IntentLogger {
             } catch (BadParcelableException e) {
                 Log.w(tag, "Extra contains unknown class instance for [" + key + "]: ", e);
             }
+        }
+    }
+
+    public static boolean hasExtras(Intent intent) {
+        return hasExtras(intent.getExtras());
+    }
+
+    public static boolean hasExtras(Bundle extras) {
+        try {
+            return (extras != null && !extras.isEmpty());
+        } catch (BadParcelableException e) {
+            Log.w("IntentLogger", "Extra contains unknown class instance: ", e);
+            return true;
         }
     }
 }
