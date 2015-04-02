@@ -1,6 +1,6 @@
 # IntentLogger
 
-[![Gitter](http://img.shields.io/badge/Gitter-Join%20Chat-brightgreen.svg?style=flat)](https://gitter.im/Drivemode/TimberLorry?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Gitter](http://img.shields.io/badge/Gitter-Join%20Chat-brightgreen.svg?style=flat)](https://gitter.im/Drivemode/IntentLogger?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-IntentLogger-brightgreen.svg?style=flat)](http://android-arsenal.com/details/1/1270)
 [![License](http://img.shields.io/badge/License-Apache%202-brightgreen.svg?style=flat)](https://github.com/Drivemode/IntentLogger/blob/master/LICENSE.md)
 [![Circle CI](https://circleci.com/gh/Drivemode/IntentLogger/tree/master.svg?style=shield)](https://circleci.com/gh/Drivemode/IntentLogger/tree/master)
