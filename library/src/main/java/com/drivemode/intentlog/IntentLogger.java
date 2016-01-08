@@ -1,5 +1,6 @@
 package com.drivemode.intentlog;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.BadParcelableException;
 import android.os.Bundle;
@@ -62,10 +63,24 @@ public class IntentLogger {
         Log.v(tag, "Action   : " + intent.getAction());
         Log.v(tag, "Category : " + intent.getCategories());
         Log.v(tag, "Data     : " + intent.getDataString());
-        Log.v(tag, "Component: " + intent.getComponent().getPackageName() + "/" + intent.getComponent().getClassName());
+        dumpComponentName(tag, intent.getComponent());
         dumpFlags(tag, intent.getFlags());
         Log.v(tag, "HasExtras: " + hasExtras(extras));
         dumpExtras(tag, extras);
+    }
+
+    public static void dumpComponentName(String tag, Intent intent) {
+        if (intent == null) {
+            return;
+        }
+        dumpComponentName(tag, intent.getComponent());
+    }
+
+    public static void dumpComponentName(String tag, ComponentName componentName) {
+        if (componentName != null)
+            Log.v(tag, "Component: " + componentName.getPackageName() + "/" + componentName.getClassName());
+        else
+            Log.v(tag, "Component: null");
     }
 
     public static void dumpFlags(String tag, Intent intent) {
