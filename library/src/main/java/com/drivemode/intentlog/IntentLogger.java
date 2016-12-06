@@ -111,10 +111,15 @@ public class IntentLogger {
             return;
         }
         for (String key : extras.keySet()) {
-            try {
-                Log.v(tag, "Extra[" + key + "] :" + String.valueOf(extras.get(key)));
-            } catch (BadParcelableException e) {
-                Log.w(tag, "Extra contains unknown class instance for [" + key + "]: ", e);
+            Object value = extras.get(key);
+            if (value instanceof Bundle) {
+                dumpExtras(tag, (Bundle) value);
+            } else {
+                try {
+                    Log.v(tag, "Extra[" + key + "] :" + String.valueOf(extras.get(key)));
+                } catch (BadParcelableException e) {
+                    Log.w(tag, "Extra contains unknown class instance for [" + key + "]: ", e);
+                }
             }
         }
     }

@@ -18,8 +18,20 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // dump intent
         IntentLogger.dump("test", getIntent());
+
+        // dump pending intent
         Intent intent = new Intent(this, MainActivity.class);
         PendingIntentLogger.dump("test", PendingIntent.getActivity(this, 1, intent, PendingIntent.FLAG_UPDATE_CURRENT));
+
+        // dump bundle
+        Bundle bundle = new Bundle();
+        bundle.putString("key", "value");
+        Bundle nestedBundle = new Bundle();
+        nestedBundle.putString("nested_key", "nested_value");
+        bundle.putBundle("nested_bundle", nestedBundle);
+        IntentLogger.dumpExtras("test", bundle);
     }
 }
