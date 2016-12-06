@@ -51,7 +51,7 @@ app V/test﹕ Intent { act=android.intent.action.MAIN cat=[android.intent.catego
 Gradle:
 
 ```
-compile 'com.drivemode:IntentLogger:1.0.0@aar'
+compile 'com.drivemode:IntentLogger:1.0.5@aar'
 ```
 
 ## License
